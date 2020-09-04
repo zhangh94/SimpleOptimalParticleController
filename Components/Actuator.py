@@ -8,5 +8,5 @@ class Actuator:
         # print("Position Actuator Initialized with: ", self.acutNoise, " m 1-sigma gaussian noise")
 
     def Actuate(self,uCmd):
-        self.uInput = uCmd + np.random.normal(0,self.acutNoise)
+        self.uInput = uCmd + np.random.normal(0,self.acutNoise)*uCmd
         return self.uInput
